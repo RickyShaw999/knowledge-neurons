@@ -1,0 +1,49 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python 调试程序: 当前文件",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python 调试程序: 1_analyze_mlm.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/1_analyze_mlm.py",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "args": [
+                "--bert_model",
+                "/data/wenzhi/llmbase/bert-base-cased",
+                "--data_path",
+                "../data/PARAREL/data_all.json",
+                "--tmp_data_path",
+                "../data/PARAREL/data_all_allbags.json",
+                "--output_dir",
+                "../results/",
+                "--output_prefix",
+                "TREx-all",
+                "--gpus",
+                "0",
+                "--max_seq_length",
+                "128",
+                "--get_ig_gold",
+                "--get_base",
+                "--batch_size",
+                "80",
+                "--num_batch",
+                "1",
+                "--pt_relation",
+                "P101",
+                "--debug",
+                "100000"
+            ]
+        }
+    ]
+}
